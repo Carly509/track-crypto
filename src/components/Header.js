@@ -1,11 +1,26 @@
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
 
-function Header() {
+const {headerContainer, header} = styles;
+
+const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <View style="headerContainer">
+            <Text style={header}>Crypto App</Text>
+        </View>
     )
 }
 
 export default Header
+
+const styles = StyleSheet.create({
+    headerContainer: {
+        display: 'flex',
+        marginTop: 55,
+        alignItems: 'center',
+    },
+    header: {
+        fontWeight: 'bold',
+        fontSize: 20
+    }
+})
+

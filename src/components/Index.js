@@ -1,11 +1,4 @@
-import React from 'react'
+import Header from './Header';
+import CryptoContainer from './CryptoContainer';
 
-function Index() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default Index
+export {Header, CryptoContainer};
