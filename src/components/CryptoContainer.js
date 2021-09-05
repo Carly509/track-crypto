@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import  {images} from '../Utils/CoinIcons';
 import Spinner from 'react-native-loading-spinner-overlay';
-import FetchDataCoin from './../Actions/FetchDataCoin';
+import FetchCoinData from '../Actions/FetchCoinData';
 import CoinCard from './CoinCard';
 
 
@@ -14,7 +14,7 @@ export class CryptoContainer extends Component {
     }
 
     componentDidMount () {
-        this.props.FetchDataCoin();
+        this.props.FetchCoinData();
     }
 
     renderCoinCards() {

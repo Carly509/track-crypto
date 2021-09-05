@@ -9,7 +9,7 @@ const {
     coinName,
     separator,
     coinPrice,
-    image,
+    imager,
     moneySymbol,
     statisticContainer,
     percentChangePlus,
@@ -20,7 +20,7 @@ const CoinCard = ( symbol, coin_name, price_usd, percent_change_24hr, percent_ch
     return (
         <View style={container}>
              <View style={upperRow}>
-                 <Image style={styles.image} source={{uri: images[symbol]}}/>
+                 <Image imageStyle={imager} source={{uri: images[symbol]}}/>
                 <Text style={coinSymbol}>{symbol}</Text>
                 <Text style={separator}>|</Text>
                 <Text style={coinName}>{coin_name}</Text>
@@ -40,7 +40,7 @@ const CoinCard = ( symbol, coin_name, price_usd, percent_change_24hr, percent_ch
                         {percent_change_7d}
                     </Text>
                 </Text>
-        </View>
+            </View>
         </View>
         
     )
@@ -49,17 +49,17 @@ const CoinCard = ( symbol, coin_name, price_usd, percent_change_24hr, percent_ch
 export default CoinCard
 
 const styles = StyleSheet.create({
-    container : {
+    container: {
         display: 'flex',
-        marginBottom: '20',
+        marginBottom: 20,
         borderBottomColor: '#e5e5e5',
-        borderBottomColorWidth: '3',
-        padding: '20'
+        // borderBottomColorWidth: 3,
+        padding: 20
     },
     upperRow: {
         display: 'flex',
         flexDirection: 'row',
-        marginBottom: '15'
+        marginBottom: 15,
     },
     coinSymbol: {
         marginTop: 10,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         fontWeight: 'bold'
     },
-    image: {
+    imager: {
         width: 35,
         height: 35,
     },

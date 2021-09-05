@@ -4,7 +4,7 @@ const {headerContainer, header} = styles;
 
 const Header = () => {
     return (
-        <View style="headerContainer">
+        <View style={headerContainer}>
             <Text style={header}>Crypto App</Text>
         </View>
     )
